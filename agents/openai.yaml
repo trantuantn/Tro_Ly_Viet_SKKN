@@ -1,0 +1,4 @@
+interface:
+  display_name: "SKKN-Master-Pro"
+  short_description: "Viết, phản biện và kiểm định sáng kiến kinh nghiệm"
+  default_prompt: "Dùng $skkn-master-pro để xây dựng và kiểm định sáng kiến kinh nghiệm dựa trên minh chứng thật."
