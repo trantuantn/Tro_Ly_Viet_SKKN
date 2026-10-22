@@ -14,3 +14,6 @@ Tất cả LL01–LL08 là **đề xuất D01**, tin cậy thực địa chưa x
 | LL08 | Nhân rộng | Nêu điều kiện tối thiểu và phần cần thích nghi | Thử ở lớp khác trước khi khẳng định toàn trường |
 
 Chỉ nâng nhãn sau khi có bản trước/sau, bối cảnh và kết quả xác minh. Không dùng số lượt thích thay hiệu quả giáo dục.
+
+## Bài học từ kiểm thử nội bộ đã quan sát
+B02 (22/10/2026, nguồn: đầu ra TC09 và báo cáo hồi quy): một bản thảo có thể nêu đúng nguyên tắc không luyện đề đo nhưng vẫn dùng lại câu đo trong ví dụ. Vì vậy cần đối chiếu trực tiếp toàn bộ học liệu với đề A/B; không chỉ tìm sự tồn tại của lời nhắc. Tin cậy cao về việc lỗi đã xuất hiện trong ca này; chưa có bằng chứng về tần suất ở giáo viên hoặc hiệu quả khắc phục trong lớp. Xem E13 và evidence-policy.md.

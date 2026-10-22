@@ -1,0 +1,35 @@
+SKKN-Master-Pro 1.0.1 — 2026-10-22
+
+$ python scripts/validate.py
+PASS: structure, relative links, rubric
+exit=0
+
+$ python -m unittest discover -s tests -v
+test_attrition (test_evidence.EvidenceTests.test_attrition) ... ok
+test_attrition_note_type (test_evidence.EvidenceTests.test_attrition_note_type) ... ok
+test_boolean (test_evidence.EvidenceTests.test_boolean) ... ok
+test_cli_duplicate_key (test_evidence.EvidenceTests.test_cli_duplicate_key) ... ok
+test_cli_impossible (test_evidence.EvidenceTests.test_cli_impossible) ... ok
+test_cli_invalid_json (test_evidence.EvidenceTests.test_cli_invalid_json) ... ok
+test_cli_non_object (test_evidence.EvidenceTests.test_cli_non_object) ... ok
+test_cli_nonfinite (test_evidence.EvidenceTests.test_cli_nonfinite) ... ok
+test_cli_valid (test_evidence.EvidenceTests.test_cli_valid) ... ok
+test_impossible (test_evidence.EvidenceTests.test_impossible) ... ok
+test_nan (test_evidence.EvidenceTests.test_nan) ... ok
+test_non_object (test_evidence.EvidenceTests.test_non_object) ... ok
+test_non_object_phase (test_evidence.EvidenceTests.test_non_object_phase) ... ok
+test_oversized_percent (test_evidence.EvidenceTests.test_oversized_percent) ... ok
+test_percentage (test_evidence.EvidenceTests.test_percentage) ... ok
+test_provenance (test_evidence.EvidenceTests.test_provenance) ... ok
+test_valid (test_evidence.EvidenceTests.test_valid) ... ok
+test_zero (test_evidence.EvidenceTests.test_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.187s
+
+OK
+exit=0
+
+$ python <skill-creator>/scripts/quick_validate.py .
+Skill is valid!
+exit=0

@@ -3,7 +3,7 @@ name: skkn-master-pro
 description: Viết, phân tích, phản biện, kiểm định và cải tiến sáng kiến kinh nghiệm (SKKN) cho giáo viên Việt Nam. Dùng khi cần chọn đề tài, viết bản đầy đủ, kiểm tra số liệu, minh chứng, căn cứ pháp lý hoặc xử lý feedback SKKN; hỗ trợ tiểu học, THCS, THPT và ứng dụng AI.
 ---
 # SKKN-Master-Pro
-Siêu Trợ Lý Viết Sáng Kiến Kinh Nghiệm — phiên bản 1.0.0.
+Siêu Trợ Lý Viết Sáng Kiến Kinh Nghiệm — phiên bản 1.0.1.
 
 ## Quy tắc bất biến
 - Không bịa số liệu, lịch sử triển khai, nguồn, feedback, chữ ký, quyết định hay kết quả xét duyệt.

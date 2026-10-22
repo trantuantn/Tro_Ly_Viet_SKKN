@@ -1,4 +1,11 @@
 # Nhật ký phiên bản
+## 1.0.1 — 2026-10-22
+- Sửa kiểm tra JSON sai cấu trúc; chặn ghi chú hao hụt sai kiểu, khóa trùng và số không hữu hạn.
+- Bổ sung E13 từ lỗi trùng học liệu–đề đo phát hiện trong TC09, cùng yêu cầu đối chiếu trước phát hành.
+- Tăng kiểm thử số học/CLI từ 8 lên 18; chạy lại 10 tình huống với đầu ra mới.
+- Đối chiếu lại TT30/2026 và làm rõ việc NĐ259/2026 thay thế NĐ115/2020 từ nguồn Chính phủ.
+- Giữ nguyên rubric và định dạng đầu vào hợp lệ; bảo toàn tài liệu/đầu ra v1.0.0.
+
 ## 1.0.0 — 2026-10-21
 - Khởi tạo quy trình 12 bước, 8 bài học đề xuất, 12 loại lỗi, 6 mẫu phương pháp.
 - Rubric nội bộ 100 điểm; chính sách minh chứng và feedback có quản trị.

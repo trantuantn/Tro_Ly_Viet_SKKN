@@ -12,3 +12,10 @@ Ngày tổng hợp: 21/10/2026. Không đồng nghĩa mọi nguồn có hiệu l
 Không nhập nội dung hồ sơ nhân sự không liên quan từ lịch sử vào repo. Không có trường hợp thành công thực tế được xác minh ở v1.0.0. Thư viện feedback thực tế khởi tạo rỗng.
 
 Mỗi bài học mới phải ghi: ID, phát biểu, nhãn verified/inferred/proposed, nguồn và đoạn liên quan, ngày truy cập, người kiểm chứng, độ tin cậy, giới hạn áp dụng, test hồi quy. Một nhận xét chưa đối chứng chỉ là candidate.
+
+## Đối chiếu 22/10/2026 — v1.0.1
+- R01 — Đã kiểm chứng trực tiếp: repository có v1.0.0, nhánh main ở commit 67560ede067a82d6824017c21dfa1929b1842248 trước cập nhật. Không diễn giải nội dung đã có là vừa tạo mới.
+- H02 — Truy xuất được phép tiếp tục chưa cung cấp bản SKKN hoặc feedback thực địa có thể xác minh; các báo cáo trước của trợ lý không tự là bằng chứng thành công. Không đưa chi tiết lịch sử không liên quan lên repo.
+- B01 — Lỗi tái hiện trong check_evidence: input None/list hoặc phase None gây AttributeError; attrition_note=true được chấp nhận. Đã sửa và có test hồi quy; đây là lỗi công cụ đã quan sát, không phải lỗi giáo viên/hội đồng.
+- T02 — Đầu ra chạy mới và báo cáo tại tests/regression-20261022.md; không dùng lại kết quả cũ để tuyên bố đã chạy mới.
+- B02 — Quan sát trực tiếp: bản đầu TC09 dùng trùng phương trình của đề đo trong ví dụ luyện/phản hồi; đã yêu cầu sửa, đối chiếu lại và ghi trong báo cáo. Dẫn đến bổ sung E13 và kiểm tra chéo học liệu–đề đo. Đây là bài học từ đầu ra AI nội bộ, không phải feedback giáo viên hoặc kết quả thực nghiệm.

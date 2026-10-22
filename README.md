@@ -1,4 +1,4 @@
-# SKKN-Master-Pro v1.0.0
+# SKKN-Master-Pro v1.0.1
 **Siêu Trợ Lý Viết Sáng Kiến Kinh Nghiệm** cho giáo viên Việt Nam: viết, phản biện, kiểm định số liệu, minh chứng và cải tiến bản thảo. Phạm vi: tiểu học, THCS, THPT; mở rộng theo môn và địa phương bằng hồ sơ thích nghi.
 
 ## Bắt đầu
@@ -12,7 +12,7 @@ Ví dụ kích hoạt:
 Skill chỉ hỏi một lượt những thông tin còn thiếu thuộc 5 nhóm. Có thể làm tiếp với giả định công khai. Thiếu minh chứng thì bản giao là dự thảo, không tuyên bố sẵn sàng nộp.
 
 ## Tri thức và giới hạn
-12 bước workflow; 8 bài học đề xuất; 12 loại lỗi dự phòng; vòng feedback có quản trị; 6 mẫu phương pháp; 8 tiêu chí tổng 100 điểm. Không có bản SKKN hoặc feedback/thành công thực địa được xác minh trong nguồn truy xuất của phiên tạo. Không dùng dữ liệu giả định làm kết quả thật. Nguồn gốc được ghi tại [provenance](references/provenance.md).
+12 bước workflow; 8 bài học đề xuất; 12 loại lỗi dự phòng và 1 lỗi đầu ra thử đã quan sát; vòng feedback có quản trị; 6 mẫu phương pháp; 8 tiêu chí tổng 100 điểm. Không có bản SKKN hoặc feedback/thành công thực địa được xác minh trong nguồn truy xuất của phiên tạo. Không dùng dữ liệu giả định làm kết quả thật. Nguồn gốc được ghi tại [provenance](references/provenance.md).
 
 Pháp lý được tra cứu nhưng một số nguồn toàn văn bị lỗi truy cập: xem [legal-framework](references/legal-framework.md). Luôn rà hiệu lực, chuyển tiếp, địa phương và thời điểm hồ sơ; không đóng cứng văn bản cũ. Rubric không phải tiêu chí chính thức.
 
@@ -26,9 +26,9 @@ Python 3, chỉ thư viện chuẩn cho các script trong repo. JSON đầu vào
 ```json
 {"before":{"n":30,"passed":12,"percent":40},"after":{"n":30,"passed":18,"percent":60},"source_status":"illustrative"}
 ```
-Khi thay đổi mẫu số, thêm `attrition_note`; không có ghi chú sẽ báo lỗi. Exit code check_evidence: 0 không phát hiện lỗi số học, 1 có lỗi, 2 đầu vào không đọc được. Số học hợp lệ không chứng thực nguồn hoặc tác động.
+Khi thay đổi mẫu số, thêm `attrition_note` là chuỗi có nội dung; boolean/số/chuỗi trắng không được chấp nhận. JSON phải là object với `before` và `after` là object; khóa trùng hoặc hằng NaN/Infinity bị từ chối. Exit code check_evidence: 0 không phát hiện lỗi số học, 1 có lỗi, 2 đầu vào không đọc được. Số học hợp lệ không chứng thực nguồn hoặc tác động.
 
-Kết quả và giới hạn xem [test-report](tests/test-report.md). Không có kiểm thử hội đồng, triển khai lớp học hoặc xuất Word/PDF trong phiên bản này.
+Kết quả gốc v1.0.0 xem [test-report](tests/test-report.md); lượt chạy mới 22/10/2026 xem [báo cáo hồi quy](tests/regression-20261022.md) và [nhật ký tự động](tests/automated-20261022.txt). Không có kiểm thử hội đồng, triển khai lớp học hoặc xuất Word/PDF trong phiên bản này.
 
 ## Bảo trì
 Góp ý theo [feedback-system](references/feedback-system.md), dùng phiếu JSON nhưng lưu bản thực tế ở nơi riêng được phép. Trước công khai phải ẩn danh. Không tự thay quy tắc cốt lõi từ phản hồi đơn lẻ. Sửa → ghi nguồn/lý do → chạy test → người quản trị duyệt → cập nhật CHANGELOG và phiên bản → commit. Không đồng bộ dữ liệu học sinh lên GitHub.
@@ -46,7 +46,7 @@ Phiên bản tiếp theo: nguồn pháp lý gốc đầy đủ, hồ sơ địa 
 | [SKILL.md](SKILL.md) | Điểm vào và quy tắc vận hành |
 | [agents/openai.yaml](agents/openai.yaml) | Metadata giao diện Agent Skills |
 | [examples/sample-skkn.md](examples/sample-skkn.md) | Bản minh họa đầy đủ cấu trúc |
-| [references/error-knowledge-base.md](references/error-knowledge-base.md) | 12 loại lỗi và ví dụ sửa |
+| [references/error-knowledge-base.md](references/error-knowledge-base.md) | 13 loại lỗi và ví dụ sửa |
 | [references/evidence-policy.md](references/evidence-policy.md) | Nguồn, số liệu, ẩn danh và diễn giải tác động |
 | [references/feedback-system.md](references/feedback-system.md) | Tiếp nhận, xác minh và đóng vòng phản hồi |
 | [references/legal-framework.md](references/legal-framework.md) | Nguồn pháp lý, hiệu lực và giới hạn truy cập |
@@ -77,4 +77,22 @@ Phiên bản tiếp theo: nguồn pháp lý gốc đầy đủ, hồ sơ địa 
 | [tests/results/case10.md](tests/results/case10.md) | Đầu ra thực chạy của tình huống kiểm thử |
 | [tests/test-cases.md](tests/test-cases.md) | 10 đầu vào và tiêu chí |
 | [tests/test-report.md](tests/test-report.md) | Kết quả chạy thực tế |
-| [tests/test_evidence.py](tests/test_evidence.py) | 8 kiểm thử số học |
+| [tests/test_evidence.py](tests/test_evidence.py) | 18 kiểm thử số học và CLI |
+
+## Tệp bổ sung ở v1.0.1
+
+| Tệp | Chức năng |
+|---|---|
+| [tests/prompts-20261022.md](tests/prompts-20261022.md) | Đầu vào thực giao và thiết kế lượt thử |
+| [tests/regression-20261022.md](tests/regression-20261022.md) | Đánh giá đầu ra, sửa lỗi và giới hạn lượt thử mới |
+| [tests/automated-20261022.txt](tests/automated-20261022.txt) | Log lệnh kiểm tra thực chạy |
+| [tests/regression-20261022/case01.md](tests/regression-20261022/case01.md) | Đầu ra mới TC01, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case02.md](tests/regression-20261022/case02.md) | Đầu ra mới TC02, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case03.md](tests/regression-20261022/case03.md) | Đầu ra mới TC03, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case04.md](tests/regression-20261022/case04.md) | Đầu ra mới TC04, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case05.md](tests/regression-20261022/case05.md) | Đầu ra mới TC05, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case06.md](tests/regression-20261022/case06.md) | Đầu ra mới TC06, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case07.md](tests/regression-20261022/case07.md) | Đầu ra mới TC07, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case08.md](tests/regression-20261022/case08.md) | Đầu ra mới TC08, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case09.md](tests/regression-20261022/case09.md) | Đầu ra mới TC09, tình huống kiểm thử tổng hợp |
+| [tests/regression-20261022/case10.md](tests/regression-20261022/case10.md) | Đầu ra mới TC10, tình huống kiểm thử tổng hợp |

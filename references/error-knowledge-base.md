@@ -109,3 +109,14 @@ Danh mục dự phòng **D01 đề xuất**, chưa thống kê tần suất th�
 - Phòng ngừa: Duyệt thay đổi lõi.
 - Trước: “Mọi SKKN phải 50 trang”.
 - Sau: “Yêu cầu riêng cần xác minh với nơi nhận”.
+
+## E13 — Luyện trùng câu đo tác động
+- Nguồn: B02, quan sát trực tiếp trong đầu ra thử TC09 ngày 22/10/2026; chưa phải lỗi thực địa.
+- Mô tả: Câu dạy học/phản hồi trùng nguyên câu A/B, làm lẫn luyện tập với đo khả năng chuyển giao.
+- Nguyên nhân dự kiến: Soạn học liệu và đề đo tách rời, thiếu đối chiếu toàn bộ bản thảo.
+- Mức độ: MAJOR.
+- Dấu hiệu: Cùng phương trình/dữ kiện/đáp án xuất hiện trong phiếu luyện và đề sau.
+- Khắc phục: Trước triển khai, đổi ví dụ luyện và kiểm tra lại lời giải; giữ đề đo riêng. Nếu đã triển khai, công khai việc lộ đề và giới hạn, không tự tô lại kết quả.
+- Phòng ngừa: Lập bảng đối chiếu học liệu–đề đo; người rà kiểm tra độc lập trước phát.
+- Trước (minh họa): Luyện 3(x−2)=9 rồi đo sau bằng đúng câu đó.
+- Sau (minh họa): Luyện 4(x−1)=20, giữ 3(x−2)=9 trong đề đo; vẫn phải rà độ khó tương đương.
